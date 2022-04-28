@@ -70,7 +70,7 @@ header{
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100%;
+  z-index: 100;
 }
 .header-active{
   background: var(--box-color);
@@ -368,7 +368,7 @@ margin-bottom: 2rem;
   }
   
   .candidatos{
-    position: relative;
+  
     margin-bottom: 0.95rem;
   }
   
