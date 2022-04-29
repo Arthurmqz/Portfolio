@@ -62,6 +62,11 @@ function validate() {
     e.preventDefault()
     if (name.value == '' || email.value == '' || msg.value == '') {
       emptyerror()
+    } else if (
+      email.value.indexOf('@') == -1 ||
+      email.value.indexOf('.') == -1
+    ) {
+      emailerror()
     } else {
       sendmail(name.value, email.value, msg.value)
       success()
@@ -86,6 +91,14 @@ function emptyerror() {
     icon: 'error'
   })
 }
+function emailerror() {
+  swal({
+    title: 'Oops!',
+    text: 'It´s necessary fill the email field with a valid email !',
+    icon: 'error'
+  })
+}
+
 function success() {
   swal({
     title: 'Email sent successfully!',
